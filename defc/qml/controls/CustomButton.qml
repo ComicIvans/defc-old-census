@@ -34,7 +34,7 @@ Button {
     // Formato del texto del botón.
     contentItem: Item {
         Text {
-            id: text_customBtn
+            id: customBtnText
             text: customBtn.text
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter

@@ -149,7 +149,7 @@ Window {
                         anchors.bottom: parent.bottom
                         verticalAlignment: Text.AlignVCenter
                         font.family: "Roboto"
-                        font.pointSize: 12
+                        font.pixelSize: 12 + 5*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
                         anchors.leftMargin: 10
                     }
                 }
@@ -214,11 +214,28 @@ Window {
             anchors.top: topBar.bottom
             anchors.fill: parent
 
+            Text {
+                id: textBienvenida
+                width: 0.15*parent.width
+                height: 0.12*parent.height
+                color: "#3eb1c8"
+                text: qsTr("Secretaría de la DEFC")
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.leftMargin: 0.5*parent.width - width/2
+                anchors.topMargin: (1/6)*parent.height - height/2
+                font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.bold: false
+                font.family: "Roboto Slab"
+            }
+
             Column {
                 id: colRight
                 anchors.left: parent.horizontalCenter
                 anchors.right: parent.right
-                anchors.top: parent.top
+                anchors.top: textBienvenida.bottom
                 anchors.bottom: parent.bottom
                 anchors.leftMargin: 0
 
@@ -244,7 +261,7 @@ Window {
                 id: colLeft
                 anchors.left: parent.left
                 anchors.right: parent.horizontalCenter
-                anchors.top: parent.top
+                anchors.top: textBienvenida.bottom
                 anchors.bottom: parent.bottom
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
@@ -259,7 +276,7 @@ Window {
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.leftMargin: 0.5*parent.width - width/2
-                    anchors.topMargin: (2/6)*parent.height - height/2
+                    anchors.topMargin: (1/5)*parent.height - height/2
                     font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
                 }
 
@@ -271,7 +288,7 @@ Window {
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.leftMargin: 0.5*parent.width - width/2
-                    anchors.topMargin: (3/6)*parent.height - height/2
+                    anchors.topMargin: (2/5)*parent.height - height/2
                     font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
                 }
 
@@ -283,7 +300,7 @@ Window {
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.leftMargin: 0.5*parent.width - width/2
-                    anchors.topMargin: (4/6)*parent.height - height/2
+                    anchors.topMargin: (3/5)*parent.height - height/2
                     font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
                 }
 
@@ -295,25 +312,8 @@ Window {
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.leftMargin: 0.5*parent.width - width/2
-                    anchors.topMargin: (5/6)*parent.height - height/2
+                    anchors.topMargin: (4/5)*parent.height - height/2
                     font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
-                }
-
-                Text {
-                    id: textBienvenida
-                    width: 0.3*parent.width
-                    height: 0.12*parent.height
-                    color: "#3eb1c8"
-                    text: qsTr("¡Hola! :D")
-                    anchors.left: parent.left
-                    anchors.top: parent.top
-                    anchors.leftMargin: 0.5*parent.width - width/2
-                    anchors.topMargin: (1/6)*parent.height - height/2
-                    font.pixelSize: 25*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.bold: false
-                    font.family: "Roboto Slab"
                 }
             }
 
