@@ -109,7 +109,7 @@ Window {
 
                 Rectangle {
                     id: titleBar
-                    height: 35
+                    height: parent.height
                     color: "#00000000"
                     anchors.left: parent.left
                     anchors.right: parent.right
@@ -149,7 +149,7 @@ Window {
                         anchors.bottom: parent.bottom
                         verticalAlignment: Text.AlignVCenter
                         font.family: "Roboto"
-                        font.pixelSize: 12 + 5*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.02*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
+                        font.pixelSize: 10 + 5*(mainWindow.height + mainWindow.width)/(mainWindow.minimumHeight + mainWindow.minimumWidth) - 0.005*( mainWindow.width/mainWindow.height >= 16/9 ? mainWindow.width - 16/9*mainWindow.height : mainWindow.height - 9/16*mainWindow.width )
                         anchors.leftMargin: 10
                     }
                 }
@@ -354,7 +354,7 @@ Window {
 
        MouseArea {
            id: resizeLeft
-           width: 10
+           width: 5
            anchors.left: parent.left
            anchors.top: parent.top
            anchors.bottom: parent.bottom
@@ -371,7 +371,7 @@ Window {
 
        MouseArea {
            id: resizeRight
-           width: 10
+           width: 5
            anchors.right: parent.right
            anchors.top: parent.top
            anchors.bottom: parent.bottom
@@ -388,7 +388,7 @@ Window {
 
        MouseArea {
            id: resizeBottom
-           height: 10
+           height: 5
            anchors.left: parent.left
            anchors.right: parent.right
            anchors.bottom: parent.bottom
@@ -400,6 +400,23 @@ Window {
            DragHandler{
                target: null
                onActiveChanged: if (active) { mainWindow.startSystemResize(Qt.BottomEdge) }
+           }
+       }
+
+       MouseArea {
+           id: resizeTop
+           height: 5
+           anchors.left: parent.left
+           anchors.right: parent.right
+           anchors.top: parent.top
+           anchors.rightMargin: 10
+           anchors.leftMargin: 10
+           anchors.bottomMargin: 0
+           cursorShape: Qt.SizeVerCursor
+
+           DragHandler{
+               target: null
+               onActiveChanged: if (active) { mainWindow.startSystemResize(Qt.TopEdge) }
            }
        }
     }
