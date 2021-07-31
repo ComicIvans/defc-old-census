@@ -10,7 +10,7 @@ from PySide6.QtWidgets import QApplication
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon("./defc/resources/img/defc_color_icon.svg"))
+    app.setWindowIcon(QIcon("./defc/resources/img/defc_icon.svg"))
     app.setOrganizationName("Delegación de Estudiantes de la Facultad de Ciencias de la Universidad de Granada")
     app.setOrganizationDomain("Sociocultural")
     app.setApplicationName("Delegación de Estudiantes de la Facultad de Ciencias")
