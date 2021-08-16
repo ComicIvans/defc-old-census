@@ -1,3 +1,3 @@
 {
-    "files": ["fonts/Roboto-Italic.ttf","__main__.py","qml/startup_.qml","fonts/Roboto-Thin.ttf","fonts/RobotoSlab-VariableFont_wght.ttf","fonts/Roboto-Bold.ttf","fonts/Roboto-Regular.ttf","qml/startup.qml"]
+    "files": ["fonts/Roboto-Italic.ttf","fonts/Roboto-Regular.ttf","qml/startup.qml","__main__.py","qml/startup_.qml","fonts/RobotoSlab-VariableFont_wght.ttf","fonts/Roboto-Thin.ttf","fonts/Roboto-Bold.ttf","qml/censo.qml","__init__.py","main.py","main.pyproject.user"]
 }

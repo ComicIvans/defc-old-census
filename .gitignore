@@ -130,3 +130,6 @@ dmypy.json
 
 # Visual Studio
 .vscode/
+
+#PySide6
+.qt_for_python
