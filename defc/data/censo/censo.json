@@ -1,0 +1,32 @@
+{
+    "2019": {
+        "Curso": "2019-2020",
+        "Inicio": "2019-09-11",
+        "Fin": "2020-07-17",
+        "Tablas": {
+            "Pleno": [],
+            "Miembros": [],
+            "Delegados": []
+        }
+    },
+    "2020": {
+        "Curso": "2020-2021",
+        "Inicio": "2020-09-21",
+        "Fin": "2021-07-23",
+        "Tablas": {
+            "Pleno": [],
+            "Miembros": [],
+            "Delegados": []
+        }
+    },
+    "2021": {
+        "Curso": "2021-2022",
+        "Inicio": "2021-09-13",
+        "Fin": "2022-07-22",
+        "Tablas": {
+            "Pleno": [],
+            "Miembros": [],
+            "Delegados": []
+        }
+    }
+}
